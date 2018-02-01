@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Random Chance</title>
+    <script type="text/javascript">
+		function Chance(quarter){
+            for (var quarter =100; quarter>0; quarter--){ 
+                var random = Math.trunc(Math.random()*100);
+                var win = Math.trunc(Math.random()*100);
+                if (random === win)
+                {   var prize = Math.trunc(Math.random()*100);
+                    while (prize <50){
+                        prize = Math.trunc(Math.random()*100);
+                    }
+                    console.log(win, quarter, prize);
+                    quarter += prize;
+                    console.log(quarter);
+                }
+            }
+            if (quarter === 0)
+            {   console.log(quarter);
+            }
+        }
+        Chance(100)
+	</script>
+</head>
+<body>
+
+</body>
+</html>
